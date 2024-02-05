@@ -7,7 +7,7 @@ import ShareAgentButton from '../../features/ShareAgentButton';
 
 export const useStyles = createStyles(({ css, token }) => ({
   logo: css`
-    color: ${token.colorText};
+    color: ${token.colorText};  
     fill: ${token.colorText};
   `,
 }));
@@ -15,16 +15,16 @@ export const useStyles = createStyles(({ css, token }) => ({
 const Header = memo(() => {
   const { styles } = useStyles();
 
-  // return (
-  //   <ChatHeader
-  //     // left={
-  //     //   <Link aria-label={'home'} href={'/'}>
-  //     //     <Logo className={styles.logo} extra={'Agents'} size={36} type={'text'} />
-  //     //   </Link>
-  //     // }
-  //     // right={<ShareAgentButton />}
-  //   />
-  // );
+  return (
+    <ChatHeader
+      left={
+        <Link aria-label={'home'} href={'/'}>
+          <Logo className={styles.logo} extra={'Agents'} size={36} type={'text'} />
+        </Link>
+      }
+      right={<ShareAgentButton />}
+    />
+  );
 });
 
 export default Header;

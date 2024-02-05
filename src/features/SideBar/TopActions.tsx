@@ -1,5 +1,5 @@
 import { ActionIcon } from '@lobehub/ui';
-import { Bot, Compass, MessageSquare } from 'lucide-react';
+import { Bot, MessageSquare } from 'lucide-react';
 import Link from 'next/link';
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
