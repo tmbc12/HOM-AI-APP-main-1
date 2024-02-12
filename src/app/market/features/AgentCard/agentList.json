@@ -1,0 +1,80 @@
+{
+  "agents": [
+    {
+      "author": "Ajasra",
+      "createAt": "2024-01-31",
+      "homepage": "https://github.com/Ajasra",
+      "identifier": "ad-generator",
+      "meta": {
+        "avatar": "https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Camera%20with%20Flash.png",
+        "description": "An AI agent that enhances background visuals in images and videos for improved quality and aesthetics.",
+        "tags": ["Image"],
+        "title": "Background Enhancement"
+      },
+      "schemaVersion": 1
+    },
+    {
+      "author": "Ajasra",
+      "createAt": "2024-01-31",
+      "homepage": "https://github.com/Ajasra",
+      "identifier": "sage-pathfinder",
+      "meta": {
+        "avatar": "https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Mobile%20Phone.png",
+        "description": "An AI agent that enhances background visuals in images and videos for improved quality and aesthetics.",
+        "tags": ["Image"],
+        "title": "Dynamic Images"
+      },
+      "schemaVersion": 1
+    },
+    {
+      "author": "Ajasra",
+      "createAt": "2024-01-31",
+      "homepage": "https://github.com/Ajasra",
+      "identifier": "sage-pathfinder",
+      "meta": {
+        "avatar": "https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Clapper%20Board.png" ,
+        "description": "An AI agent that enhances background visuals in images and videos for improved quality and aesthetics.",
+        "tags": ["Image"],
+        "title": "Ad Baker"
+      },
+      "schemaVersion": 1
+    },
+    {
+      "author": "Ajasra",
+      "createAt": "2024-01-31",
+      "homepage": "https://github.com/Ajasra",
+      "identifier": "sage-pathfinder",
+      "meta": {
+        "avatar": "https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/People%20with%20activities/Person%20Raising%20Hand%20Light%20Skin%20Tone.png" ,
+        "description": "An AI agent that enhances background visuals in images and videos for improved quality and aesthetics.",
+        "tags": ["Video"],
+        "title": "Talking Avatars"
+      },
+      "schemaVersion": 1
+    },{
+      "author": "Ajasra",
+      "createAt": "2024-01-31",
+      "homepage": "https://github.com/Ajasra",
+      "identifier": "sage-pathfinder",
+      "meta": {
+        "avatar": "https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Studio%20Microphone.png" ,
+        "description": "An AI agent that enhances background visuals in images and videos for improved quality and aesthetics.",
+        "tags": ["Audio"],
+        "title": "Product Voiceovers"
+      },
+      "schemaVersion": 1
+    },{
+      "author": "Ajasra",
+      "createAt": "2024-01-31",
+      "homepage": "https://github.com/Ajasra",
+      "identifier": "sage-pathfinder",
+      "meta": {
+        "avatar": "https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Pen.png" ,
+        "description": "An AI agent that enhances background visuals in images and videos for improved quality and aesthetics.",
+        "tags": ["code"],
+        "title": "Confidence Scores"
+      },
+      "schemaVersion": 1
+    }
+  ]
+}
