@@ -7,6 +7,7 @@ import {
   HardDriveDownload,
   HardDriveUpload,
   Heart,
+  HelpCircle,
   Settings,
   User,
 } from 'lucide-react';
@@ -149,6 +150,7 @@ const BottomActions = memo<BottomActionProps>(({ tab, setTab }) => {
           <ActionIcon active={tab === SidebarTabKey.Setting} icon={Settings} />
         )}
       </Dropdown>
+      <ActionIcon icon={HelpCircle} placement={'right'} />
     </>
   );
 });
