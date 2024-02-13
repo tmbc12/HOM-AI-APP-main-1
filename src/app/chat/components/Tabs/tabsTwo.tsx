@@ -1,8 +1,8 @@
-import React, { FC, Fragment } from "react";
+import React, {  Fragment } from "react";
 import styles from "./Tabs.module.css";
 import Range from "./range";
 import { ArrowLeft, ArrowRight, ArrowUp, ArrowDown, RotateCw, RotateCcw, ZoomIn, ZoomOut } from 'lucide-react';
-const TabTwo: FC<{}> = () => {
+const TabTwo = () => {
     return (
         <Fragment>
             <h3 className="" style={{ color: "white" }}>Camera control</h3>

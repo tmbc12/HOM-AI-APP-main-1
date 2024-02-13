@@ -6,7 +6,6 @@ import { Flexbox } from 'react-layout-kit';
 
 import ResponsiveIndex from '@/components/ResponsiveIndex';
 
-import PageTitle from '../features/PageTitle';
 import ChatHeader from './features/ChatHeader';
 import Conversation from './features/Conversation';
 // import SideBar from './features/SideBar';

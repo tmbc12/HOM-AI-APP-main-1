@@ -6,7 +6,6 @@ import {
     useState,
     useRef
 } from "react";
-import classnames from "classnames";
 import styles from "./Tabs.module.css";
 
 

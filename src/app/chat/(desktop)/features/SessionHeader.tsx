@@ -1,14 +1,11 @@
-import { ActionIcon, Logo } from '@lobehub/ui';
+
 import { createStyles } from 'antd-style';
-import { MessageSquarePlus } from 'lucide-react';
 import { memo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Flexbox } from 'react-layout-kit';
 
-import { DESKTOP_HEADER_ICON_SIZE } from '@/const/layoutTokens';
 import { useSessionStore } from '@/store/session';
 
-import SessionSearchBar from '../../features/SessionSearchBar';
 
 import { Maximize, Video, Settings2 } from 'lucide-react';
 import Upload from "../../components/ImgUpload/imgupload"
@@ -76,21 +73,10 @@ const Header = memo(() => {
       </Flexbox>
 
       <Upload />
-      <Tabs className='tabs'  selectedTab={selectedTab} onClick={setSelectedTab} tabs={tabs} />
+      <Tabs className='tabs' selectedTab={selectedTab} onClick={setSelectedTab} tabs={tabs} />
     </Flexbox>
   );
 });
 
 export default Header;
 
-
-{/* <Logo className={styles.logo} size={36} type={'text'} />
-<ActionIcon
-  icon={MessageSquarePlus}
-  onClick={() => createSession()}
-  size={DESKTOP_HEADER_ICON_SIZE}
-  style={{ flex: 'none' }}
-  title={t('newAgent')}
-/>
-
-<SessionSearchBar /> */}

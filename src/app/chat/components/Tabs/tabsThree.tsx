@@ -1,8 +1,8 @@
-import React, { FC, Fragment } from "react";
+import React, { Fragment } from "react";
 import Range from "./range";
 import styles from "./Tabs.module.css";
 
-const TabThree: FC<{}> = () => {
+const TabThree = () => {
   return (
     <Fragment>
       <h3 className="" style={{ color: "white", marginTop: "50px" }}>Consistency with text</h3>
