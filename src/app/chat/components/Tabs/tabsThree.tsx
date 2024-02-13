@@ -1,15 +1,15 @@
 import React, { Fragment } from "react";
 import Range from "./range";
-import styles from "./Tabs.module.css";
+// import styles from "./Tabs.module.css";
 
 const TabThree = () => {
   return (
     <Fragment>
       <h3 className="" style={{ color: "white", marginTop: "50px" }}>Consistency with text</h3>
       <Range
-        min={0}
         max={24}
-        onChange={({ min, max }: { min: number; max: number }) =>
+        min={0}
+        onChange={({ min, max }: { max: number; min: number }) =>
           console.log(`min = ${min}, max = ${max}`)
         }
       />

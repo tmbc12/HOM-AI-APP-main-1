@@ -1,10 +1,9 @@
-
 import { createStyles } from 'antd-style';
-import { memo, useState } from 'react';
-import { useTranslation } from 'react-i18next';
+import React, { memo, useState } from 'react';
+// import { useTranslation } from 'react-i18next';
 import { Flexbox } from 'react-layout-kit';
 
-import { useSessionStore } from '@/store/session';
+// import { useSessionStore } from '@/store/session';
 
 
 import { Maximize, Video, Settings2 } from 'lucide-react';
@@ -28,36 +27,36 @@ export const useStyles = createStyles(({ css, token }) => ({
 
 const Header = memo(() => {
   const { styles } = useStyles();
-  const { t } = useTranslation('chat');
-  const [createSession] = useSessionStore((s) => [s.createSession]);
+  // const {  } = useTranslation('chat');
+  // const [createSession] = useSessionStore((s) => [s.createSession]);
 
 
   type TabsType = {
-    label: string;
+    Component: React.FC<{ index: number }>;
+    icons: React.FC;
     index: number;
-    Component: React.FC<{}>;
-    icons: React.FC<{}>;
+    label: string;
   }[];
 
   // Tabs Array
   const tabs: TabsType = [
     {
-      label: "Tab One",
-      index: 1,
       Component: TabOne,
       icons: Maximize,
+      index: 1,
+      label: "Tab One",
     },
     {
-      label: "Tab Two",
-      index: 2,
       Component: TabTwo,
       icons: Video,
+      index: 2,
+      label: "Tab Two",
     },
     {
-      label: "Tab Three",
-      index: 3,
       Component: TabThree,
       icons: Settings2,
+      index: 3,
+      label: "Tab Three",
     }
   ];
 
@@ -73,7 +72,7 @@ const Header = memo(() => {
       </Flexbox>
 
       <Upload />
-      <Tabs className='tabs' selectedTab={selectedTab} onClick={setSelectedTab} tabs={tabs} />
+      <Tabs className='tabs' onClick={setSelectedTab} selectedTab={selectedTab}  tabs={tabs} />
     </Flexbox>
   );
 });

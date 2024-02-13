@@ -2,18 +2,18 @@ import React, { FC } from "react";
 import styles from "./Tabs.module.css";
 
 type Tab = {
-  label: string;
-  index: number;
   Component: FC<{ index: number }>;
   icons: FC<{ label: string }>;
+  index: number;
+  label: string;
 };
 
 type TabsProps = {
-  tabs: Tab[];
-  selectedTab: number;
+  className?: string;
   onClick: (index: number) => void;
   orientation?: "horizontal" | "vertical";
-  className?: string;
+  selectedTab: number;
+  tabs: Tab[];
 };
 
 const Tabs: FC<TabsProps> = ({
@@ -32,24 +32,24 @@ const Tabs: FC<TabsProps> = ({
       }
     >
       <div
+        aria-orientation={orientation}
         className={styles.header}
         role="tablist"
-        aria-orientation={orientation}
       >
         {tabs.map((tab) => (
           <button
+            aria-controls={`tabpanel-${tab.index}`}
+            aria-selected={selectedTab === tab.index}
             className={selectedTab === tab.index ? "active" : ""}
+            id={`btn-${tab.index}`}
+            key={tab.index}
+            onClick={() => onClick(tab.index)}
+            role="tab"
             style={{
               color: selectedTab === tab.index ? "white" : "gray",
             }}
-            onClick={() => onClick(tab.index)}
-            key={tab.index}
-            type="button"
-            role="tab"
-            aria-selected={selectedTab === tab.index}
-            aria-controls={`tabpanel-${tab.index}`}
             tabIndex={selectedTab === tab.index ? 0 : -1}
-            id={`btn-${tab.index}`}
+            type="button"
           >
             <tab.icons label={tab.label} />
           </button>
@@ -60,9 +60,9 @@ const Tabs: FC<TabsProps> = ({
         opacity: "0.1",
       }} />
       <div
-        role="tabpanel"
         aria-labelledby={`btn-${selectedTab}`}
         id={`tabpanel-${selectedTab}`}
+        role="tabpanel"
       >
         {selectedTabObject && <selectedTabObject.Component index={selectedTab} />}
       </div>

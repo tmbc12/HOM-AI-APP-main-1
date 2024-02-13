@@ -10,9 +10,9 @@ import styles from "./Tabs.module.css";
 
 
 interface MultiRangeSliderProps {
-    min: number;
     max: number;
-    onChange: Function;
+    min: number;
+    onChange: (values: {  max: number; min: number }) => void;
 }
 
 const MultiRangeSlider: FC<MultiRangeSliderProps> = ({
@@ -21,22 +21,22 @@ const MultiRangeSlider: FC<MultiRangeSliderProps> = ({
     onChange
 }) => {
     const [minVal, setMinVal] = useState(min);
-    const [maxVal, setMaxVal] = useState(max);
+    const [maxVal,] = useState(max);
     const minValRef = useRef<HTMLInputElement>(null);
     const maxValRef = useRef<HTMLInputElement>(null);
     const range = useRef<HTMLDivElement>(null);
 
-    // Convert to percentage
+
     const getPercent = useCallback(
         (value: number) => Math.round(((value - min) / (max - min)) * 100),
         [min, max]
     );
 
-    // Set width of the range to decrease from the left side
+    
     useEffect(() => {
         if (maxValRef.current) {
             const minPercent = getPercent(minVal);
-            const maxPercent = getPercent(+maxValRef.current.value); // Precede with '+' to convert the value from type string to type number
+            const maxPercent = getPercent(+maxValRef.current.value); 
 
             if (range.current) {
                 range.current.style.left = `${minPercent}%`;
@@ -45,7 +45,7 @@ const MultiRangeSlider: FC<MultiRangeSliderProps> = ({
         }
     }, [minVal, getPercent]);
 
-    // Set width of the range to decrease from the right side
+    
     useEffect(() => {
         if (minValRef.current) {
             const minPercent = getPercent(+minValRef.current.value);
@@ -57,32 +57,33 @@ const MultiRangeSlider: FC<MultiRangeSliderProps> = ({
         }
     }, [maxVal, getPercent]);
 
-    // Get min and max values when their state changes
+    
     useEffect(() => {
-        onChange({ min: minVal, max: maxVal });
+        onChange({ max: maxVal, min: minVal });
     }, [minVal, maxVal, onChange]);
 
     return (
         <div className={styles.container}>
             <div className={styles.slider__left}>{minVal}</div>
             <input
-                type="range"
-                min={min}
+                className={styles.slider__input}
                 max={max}
-                value={minVal}
-                ref={minValRef}
+                min={min}
                 onChange={(event: ChangeEvent<HTMLInputElement>) => {
                     const value = Math.min(+event.target.value, maxVal);
                     setMinVal(value);
                     event.target.value = value.toString();
                 }}
-                className={styles.slider__input}
+                ref={minValRef}
+                type="range"
+                value={minVal}
+            
             />
 
 
             <div className={styles.slider}>
                 <div className={styles.slider__track}></div>
-                <div ref={range} className={styles.slider__range}></div>
+                <div className={styles.slider__range} ref={range} ></div>
                 <div className="slider__right-value">{maxVal}</div>
             </div>
         </div>

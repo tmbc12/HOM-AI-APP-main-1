@@ -22,9 +22,9 @@ const TabOne  = () => {
             </div>
             <h3 className="" style={{ color: "white", marginTop: "30px" }}>Frames per second</h3>
             <Range
-                min={0}
                 max={24}
-                onChange={({ min, max }: { min: number; max: number }) =>
+                min={0}
+                onChange={({ min, max }: { max: number; min: number }) =>
                     console.log(`min = ${min}, max = ${max}`)
                 }
             />

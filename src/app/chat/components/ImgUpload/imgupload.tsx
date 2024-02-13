@@ -20,15 +20,14 @@ const ImgUpload = () => {
   return (
     <div className="App">
       <ImageUploading
-        multiple
-        value={images}
-        onChange={onChange}
         maxNumber={maxNumber}
+        multiple
+        onChange={onChange}
+        value={images}
       >
         {({
           imageList,
           onImageUpload,
-          onImageRemoveAll,
           onImageUpdate,
           onImageRemove,
           isDragging,
@@ -36,20 +35,20 @@ const ImgUpload = () => {
         }) => (
           // write your building UI
           <div className="">
-            <button className={styles.btn}
+            <button  className={styles.btn} onClick={onImageUpload}
               style={isDragging ? { color: "white" } : undefined}
-              onClick={onImageUpload}
+               type="button"
               {...dragProps}
             >
               <UploadCloud /> Upload your image
             </button>
             &nbsp;
             {imageList.map((image, index) => (
-              <div key={index} className="image-item">
-                <img src={image.dataURL} alt="" width="100" />
+              <div className="image-item" key={index} >
+                <img src={image.dataURL}  width="100" />
                 <div className="image-item__btn-wrapper">
-                  <button onClick={() => onImageUpdate(index)}>Update</button>
-                  <button onClick={() => onImageRemove(index)}>Remove</button>
+                  <button onClick={() => onImageUpdate(index)} type="button">Update</button>
+                  <button onClick={() => onImageRemove(index)} type="button">Remove</button>
                 </div>
               </div>
             ))}
