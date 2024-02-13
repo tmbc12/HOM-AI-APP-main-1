@@ -9,8 +9,8 @@ import {
 } from '@/const/layoutTokens';
 import { useGlobalStore } from '@/store/global';
 
-import Footer from './Footer';
-import Head from './Header';
+// import Footer from './Footer';
+// import Head from './Header';
 import TextArea from './TextArea';
 
 const ChatInput = memo(() => {
@@ -44,9 +44,9 @@ const ChatInput = memo(() => {
         padding={'12px 0 16px'}
         style={{ minHeight: CHAT_TEXTAREA_HEIGHT, position: 'relative' }}
       >
-        <Head expand={expand} setExpand={setExpand} />
+        {/* <Head expand={expand} setExpand={setExpand} /> */}
         <TextArea setExpand={setExpand} />
-        <Footer setExpand={setExpand} />
+        {/* <Footer setExpand={setExpand} /> */}
       </Flexbox>
     </DraggablePanel>
   );

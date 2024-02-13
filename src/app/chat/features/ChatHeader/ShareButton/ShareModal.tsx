@@ -8,7 +8,7 @@ import { FORM_STYLE } from '@/const/layoutTokens';
 import { useChatStore } from '@/store/chat';
 import { useGlobalStore } from '@/store/global';
 
-import Preview from './Preview';
+// import Preview from './Preview';
 import { FieldType, ImageType } from './type';
 import { useScreenshot } from './useScreenshot';
 
@@ -147,7 +147,7 @@ const ShareModal = memo<ModalProps>(({ onCancel, open }) => {
           style={{ width: '100%' }}
           value={tab}
         />
-        {tab === Tab.Screenshot && <Preview title={title} {...fieldValue} />}
+        {/* {tab === Tab.Screenshot && <Preview title={title} {...fieldValue} />} */}
         <Form
           initialValues={DEFAULT_FIELD_VALUE}
           items={settings}

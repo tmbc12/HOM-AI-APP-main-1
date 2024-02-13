@@ -1,6 +1,6 @@
 
 import { ActionIcon,  ChatHeader } from '@lobehub/ui';
-import { PanelRightClose, PanelRightOpen } from 'lucide-react';
+import { Upload  } from 'lucide-react';
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 
@@ -78,10 +78,10 @@ const Right = memo(() => {
     <>
       <ShareButton />
       <ActionIcon
-        icon={showAgentSettings ? PanelRightClose : PanelRightOpen}
-        onClick={() => toggleConfig()}
-        size={DESKTOP_HEADER_ICON_SIZE}
-        title={t('roleAndArchive')}
+        icon={Upload }
+        // onClick={() => toggleConfig()}
+        // size={DESKTOP_HEADER_ICON_SIZE}
+        // title={t('roleAndArchive')}
       />
       <SettingButton />
     </>
