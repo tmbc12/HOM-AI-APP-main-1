@@ -50,7 +50,7 @@ const ShareModal = memo<ModalProps>(({ onCancel, open }) => {
   const { t } = useTranslation('chat');
   const avatar = useGlobalStore((s) => s.settings.avatar);
   const [shareLoading, shareToShareGPT] = useChatStore((s) => [s.shareLoading, s.shareToShareGPT]);
-  const { loading, onDownload, title } = useScreenshot(fieldValue.imageType);
+  const { loading, onDownload } = useScreenshot(fieldValue.imageType);
 
   const options: SegmentedProps['options'] = useMemo(
     () => [

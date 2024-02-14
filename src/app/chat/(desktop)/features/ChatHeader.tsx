@@ -2,10 +2,9 @@
 import { ActionIcon,  ChatHeader } from '@lobehub/ui';
 import { Upload  } from 'lucide-react';
 import { memo } from 'react';
-import { useTranslation } from 'react-i18next';
+// import { useTranslation } from 'react-i18next';
 
-import { DESKTOP_HEADER_ICON_SIZE } from '@/const/layoutTokens';
-import { useGlobalStore } from '@/store/global';
+// import { useGlobalStore } from '@/store/global';
 
 import SettingButton from '../../features/ChatHeader/SettingButton';
 import ShareButton from '../../features/ChatHeader/ShareButton';
@@ -67,12 +66,12 @@ import ShareButton from '../../features/ChatHeader/ShareButton';
 // });
 
 const Right = memo(() => {
-  const { t } = useTranslation('chat');
+  // const { t } = useTranslation('chat');
 
-  const [showAgentSettings, toggleConfig] = useGlobalStore((s) => [
-    s.preference.showChatSideBar,
-    s.toggleChatSideBar,
-  ]);
+  // const [showAgentSettings, toggleConfig] = useGlobalStore((s) => [
+  //   s.preference.showChatSideBar,
+  //   s.toggleChatSideBar,
+  // ]);
 
   return (
     <>

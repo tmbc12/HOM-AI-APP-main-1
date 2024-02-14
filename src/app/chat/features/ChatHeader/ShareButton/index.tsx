@@ -1,28 +1,29 @@
+import React from 'react';
 import { ActionIcon } from '@lobehub/ui';
 import { Bell } from 'lucide-react';
 // import dynamic from 'next/dynamic';
-import { memo } from 'react';
-import { useTranslation } from 'react-i18next';
-import useMergeState from 'use-merge-value';
+// import { memo } from 'react';
+// import { useTranslation } from 'react-i18next';
+// import useMergeState from 'use-merge-value';
 
-import { DESKTOP_HEADER_ICON_SIZE, MOBILE_HEADER_ICON_SIZE } from '@/const/layoutTokens';
-import { useChatStore } from '@/store/chat';
+// import { DESKTOP_HEADER_ICON_SIZE, MOBILE_HEADER_ICON_SIZE } from '@/const/layoutTokens';
+// import { useChatStore } from '@/store/chat';
 
 // const ShareModal = dynamic(() => import('./ShareModal'));
-interface ShareButtonProps {
-  mobile?: boolean;
-  open?: boolean;
-  setOpen?: (open: boolean) => void;
-}
+// interface ShareButtonProps {
+//   mobile?: boolean;
+//   open?: boolean;
+//   setOpen?: (open: boolean) => void;
+// }
 
-const ShareButton = memo<ShareButtonProps>(({ mobile, setOpen, open }) => {
-  const [isModalOpen, setIsModalOpen] = useMergeState(false, {
-    defaultValue: false,
-    onChange: setOpen,
-    value: open,
-  });
-  const { t } = useTranslation('common');
-  const [shareLoading] = useChatStore((s) => [s.shareLoading]);
+const ShareButton = () => {
+  // const [isModalOpen, setIsModalOpen] = useMergeState(false, {
+  //   defaultValue: false,
+  //   onChange: setOpen,
+  //   value: open,
+  // });
+  // const { t } = useTranslation('common');
+  // const [shareLoading] = useChatStore((s) => [s.shareLoading]);
 
   return (
     <>
@@ -36,6 +37,6 @@ const ShareButton = memo<ShareButtonProps>(({ mobile, setOpen, open }) => {
       {/* <ShareModal onCancel={() => setIsModalOpen(false)} open={isModalOpen} /> */}
     </>
   );
-});
+};
 
 export default ShareButton;
